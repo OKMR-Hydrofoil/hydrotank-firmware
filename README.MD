@@ -39,8 +39,10 @@ Populate the following table with your board's pin mappings.
 
 | Signal | Function       | Board Pin | Notes |
 | ------ | -------------- | --------- | ----- |
-| SCL    | I2C Clock OLED | D35       |       |
-| SDA    | I2C Data OLED  | D34       |       |
+| SCL    | I2C Clock OLED | D33       |       |
+| SDA    | I2C Data OLED  | D32       |       |
+| A      | Encoder A      | D25       |       |
+| B      | Encoder B      | D26       |       |
 
 To be updated when I fix bad pins as D35 and D34 are outputs only on ESP32 DevKitV1.
 
