@@ -1,0 +1,40 @@
+#pragma once
+
+#include <Arduino.h>
+
+// --- PIN DEFINITIONS ---
+#define LED_PIN 2
+
+#define OLED_SDA_PIN 32
+#define OLED_SCL_PIN 33
+
+#define ENCODER_PIN_A 25
+#define ENCODER_PIN_B 26
+#define ENCODER_BUTTON_PIN 27
+#define SWITCH_PIN 14
+
+const int DOUT_PINS[4] = {21, 23, 4, 18};
+const int SCK_PINS[4] = {19, 22, 15, 5};
+
+// --- TASK CONFIGURATION ---
+#define STACK_SIZE_BLINK 2048
+#define STACK_SIZE_PRINT 4096
+#define STACK_SIZE_ENCODER 4096
+#define STACK_SIZE_SCALES 4096
+#define STACK_SIZE_DISPLAY 8192
+
+#define PRIORITY_BLINK 1
+#define PRIORITY_PRINT 1
+#define PRIORITY_ENCODER 1
+#define PRIORITY_SCALES 1
+#define PRIORITY_DISPLAY 1
+
+#define CORE_ID_COMM 1
+#define CORE_ID_GFX 0
+
+// --- SYSTEM CONSTANTS ---
+#define WEIGHT_QUEUE_LEN 1
+#define ENCODER_QUEUE_LEN 1
+#define SCALE_FACTOR 420.0
+#define DISPLAY_FPS 30
+#define PONG_TRIGGER_HOLD_MS 3000
