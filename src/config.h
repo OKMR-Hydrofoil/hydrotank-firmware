@@ -35,6 +35,6 @@ const int SCK_PINS[4] = {19, 22, 15, 5};
 // --- SYSTEM CONSTANTS ---
 #define WEIGHT_QUEUE_LEN 1
 #define ENCODER_QUEUE_LEN 1
-#define SCALE_FACTOR 420.0
+#define SCALE_FACTOR 2280.0 // Approximate default for 1kg load cell (calibrate to confirm)
 #define DISPLAY_FPS 30
 #define PONG_TRIGGER_HOLD_MS 3000
