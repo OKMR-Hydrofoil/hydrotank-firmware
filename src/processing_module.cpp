@@ -21,12 +21,14 @@ void processingTask(void *pvParameters)
                 sum += data.weights[i];
                 count++;
             }
-
-            if (count == 0) continue;
             
             ProcessedData out;
             out.timestamp = millis();
-            out.avg_force = sum / count;
+            if (count == 0) {
+                out.avg_force = 0;
+            } else {
+                out.avg_force = sum / count;
+            }
 
             xQueueSend(processedQueue, &out, 0);
         }
